@@ -23,21 +23,21 @@ Vagrant.configure("2") do |config|
 
   # VM2 : Managed node 1.
   config.vm.define "vm-2" do |vm2|
-    vm2.vm.hostname = "host1.anslab.com"
+    vm2.vm.hostname = "k8s-master.anslab.com"
     vm2.vm.network "private_network", ip: "192.168.56.11"
     vm2.vm.provision "shell", path: "bootstrap.sh"
   end
 
   # VM3: Managed node 2.
   config.vm.define "vm-3" do |vm3|
-    vm3.vm.hostname = "host2.anslab.com"
+    vm3.vm.hostname = "k8s-worker-1.anslab.com"
     vm3.vm.network "private_network", ip: "192.168.56.12"
     vm3.vm.provision "shell", path: "bootstrap.sh"
   end
   
   # VM4: Managed node 3.
   config.vm.define "vm-4" do |vm4|
-    vm4.vm.hostname = "host3.anslab.com"
+    vm4.vm.hostname = "k8s-worker-2.anslab.com"
     vm4.vm.network "private_network", ip: "192.168.56.13"
     vm4.vm.provision "shell", path: "bootstrap.sh"
   end
