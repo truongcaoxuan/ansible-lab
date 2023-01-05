@@ -13,10 +13,10 @@ touch /home/vagrant/.hushlogin
 
 # 192.168.56.10 controller.ansible.com vm-1
 # 192.168.56.11 k8s-master.ansible.com vm-2
-# 192.168.56.12 k8s-worker-1.ansible.com vm-3
-# 192.168.56.13 k8s-worker-2.ansible.com vm-4
+# 192.168.56.12 k8s-worker1.ansible.com vm-3
+# 192.168.56.13 k8s-worker2.ansible.com vm-4
 
-echo -e "192.168.56.10 controller.anslab.com vm-1\n192.168.56.11 k8s-master.anslab.com vm-2\n192.168.56.12 k8s-worker-1.anslab.com vm-3\n192.168.56.13 k8s-worker-2.anslab.com vm-4" >> /etc/hosts
+echo -e "192.168.56.10 controller.anslab.com vm-1\n192.168.56.11 k8s-master.anslab.com vm-2\n192.168.56.12 k8s-worker1.anslab.com vm-3\n192.168.56.13 k8s-worker2.anslab.com vm-4" >> /etc/hosts
 
 # Installing necessary packages 
 
