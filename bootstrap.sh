@@ -11,11 +11,12 @@ touch /home/vagrant/.hushlogin
 
 # Updating the hosts file for all the 3 nodes with the IP given in vagrantfile
 
-# 192.168.10.3 controller.ansible.com controller
-# 192.168.10.4 managed1.ansible.com managed1
-# 192.168.10.5 managed2.ansible.com managed2
+# 192.168.56.10 controller.ansible.com vm-1
+# 192.168.56.11 host1.ansible.com vm-2
+# 192.168.56.12 host2.ansible.com vm-3
+# 192.168.56.13 host3.ansible.com vm-4
 
-echo -e "192.168.10.3 controller.anslab.com controller\n192.168.10.4 managed1.anslab.com managed1\n192.168.10.5 managed2.anslab.com managed2" >> /etc/hosts
+echo -e "192.168.56.10 controller.anslab.com vm-1\n192.168.56.11 host1.anslab.com vm-2\n192.168.56.12 host2.anslab.com vm-3\n192.168.56.13 host3.anslab.com vm-4" >> /etc/hosts
 
 # Installing necessary packages 
 
