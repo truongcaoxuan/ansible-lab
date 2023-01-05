@@ -14,31 +14,31 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
 
   # VM1: Master node where ansible will be installed
-  config.vm.define "vm-1" do |vm1|
-    vm1.vm.hostname = "controller.anslab.com"
-    vm1.vm.network "private_network", ip: "192.168.56.10"
-    vm1.vm.provision "shell", path: "bootstrap.sh"
-    vm1.vm.provision "file", source: "key_gen.sh", destination: "/home/vagrant/"
+  config.vm.define "controller" do |controller|
+    controller.vm.hostname = "controller.anslab.com"
+    controller.vm.network "private_network", ip: "192.168.56.10"
+    controller.vm.provision "shell", path: "bootstrap.sh"
+    controller.vm.provision "file", source: "key_gen.sh", destination: "/home/vagrant/"
   end
 
   # VM2 : Managed node 1.
-  config.vm.define "vm-2" do |vm2|
-    vm2.vm.hostname = "k8s-master.anslab.com"
-    vm2.vm.network "private_network", ip: "192.168.56.11"
-    vm2.vm.provision "shell", path: "bootstrap.sh"
+  config.vm.define "master" do |m1|
+    m1.vm.hostname = "master.anslab.com"
+    m1.vm.network "private_network", ip: "192.168.56.11"
+    m1.vm.provision "shell", path: "bootstrap.sh"
   end
 
   # VM3: Managed node 2.
-  config.vm.define "vm-3" do |vm3|
-    vm3.vm.hostname = "k8s-worker1.anslab.com"
-    vm3.vm.network "private_network", ip: "192.168.56.12"
-    vm3.vm.provision "shell", path: "bootstrap.sh"
+  config.vm.define "worker1" do |m2|
+    m2.vm.hostname = "worker1.anslab.com"
+    m2.vm.network "private_network", ip: "192.168.56.12"
+    m2.vm.provision "shell", path: "bootstrap.sh"
   end
   
   # VM4: Managed node 3.
-  config.vm.define "vm-4" do |vm4|
-    vm4.vm.hostname = "k8s-worker2.anslab.com"
-    vm4.vm.network "private_network", ip: "192.168.56.13"
-    vm4.vm.provision "shell", path: "bootstrap.sh"
+  config.vm.define "worker2" do |m3|
+    m3.vm.hostname = "worker2.anslab.com"
+    m3.vm.network "private_network", ip: "192.168.56.13"
+    m3.vm.provision "shell", path: "bootstrap.sh"
   end
 end
