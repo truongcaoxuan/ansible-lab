@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   end
 
   # Will not check for box updates during every startup.
-  configvm.vm.box = "ubuntu/focal64"
+  config.vm.box = "ubuntu/focal64"
   config.vm.box_version = "20221213.0.0"
   config.vm.box_check_update = false
 
