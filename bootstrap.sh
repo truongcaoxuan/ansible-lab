@@ -9,14 +9,14 @@ sudo systemctl restart sshd
 
 touch /home/vagrant/.hushlogin
 
-# Updating the hosts file for all the 3 nodes with the IP given in vagrantfile
+# Updating the hosts file for all the 4 nodes with the IP given in vagrantfile
 
 # 192.168.56.10 controller.ansible.com vm-1
-# 192.168.56.11 host1.ansible.com vm-2
-# 192.168.56.12 host2.ansible.com vm-3
-# 192.168.56.13 host3.ansible.com vm-4
+# 192.168.56.11 k8s-master.ansible.com vm-2
+# 192.168.56.12 k8s-worker-1.ansible.com vm-3
+# 192.168.56.13 k8s-worker-2.ansible.com vm-4
 
-echo -e "192.168.56.10 controller.anslab.com vm-1\n192.168.56.11 host1.anslab.com vm-2\n192.168.56.12 host2.anslab.com vm-3\n192.168.56.13 host3.anslab.com vm-4" >> /etc/hosts
+echo -e "192.168.56.10 controller.anslab.com vm-1\n192.168.56.11 k8s-master.anslab.com vm-2\n192.168.56.12 k8s-worker-1.anslab.com vm-3\n192.168.56.13 k8s-worker-2.anslab.com vm-4" >> /etc/hosts
 
 # Installing necessary packages 
 
