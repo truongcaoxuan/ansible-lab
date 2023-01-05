@@ -4,10 +4,10 @@ This repository contains three node ansible lab setup using vagrant and virtualb
 
 |    Node Type   | Node Name             |  IP Address  | OS Flavor     |
 | ---------------| --------------------- |--------------|---------------|
-| Controller Node| controller.anslab.com | 192.168.10.3 | ubuntu/focal64|
-| managed Node   | managed1.anslab.com   | 192.168.10.4 | ubuntu/focal64|
-| managed Node   | managed2.anslab.com   | 192.168.10.5 | ubuntu/focal64|
+| VM1-Controller | controller.anslab.com | 192.168.56.10 | ubuntu/focal64|
+| VM2 - Host 1   | host1.anslab.com      | 192.168.56.11 | ubuntu/focal64|
+| VM3 - Host 2   | host2.anslab.com      | 192.168.56.12 | ubuntu/focal64|
+| VM4 - Host 3   | host2.anslab.com      | 192.168.56.13 | ubuntu/focal64|
 
-I have written the detailed explanation on how to use the lab in OsTechnix website. You can access it using the below link.
-
+Reference detailed explanation using the below link.
 https://ostechnix.com/ansible-lab-setup-with-vagrant-and-virtualbox-in-linux/
