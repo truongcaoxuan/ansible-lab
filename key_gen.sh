@@ -29,3 +29,4 @@ echo
 
 ansible all -i inventory -m "shell" -a "uptime"
 echo
+ 
