@@ -6,7 +6,7 @@ ssh-keygen -b 2048 -t rsa -f /home/vagrant/.ssh/id_rsa -q -N ""
 
 # LOOPING THROUGH AND DISTRIBUTING THE KEY
 
-for val in controller managed1 managed2; do 
+for val in controller host1 host2 host3; do 
 	echo "-------------------- COPYING KEY TO ${val^^} NODE ------------------------------"
 	sshpass -p 'vagrant' ssh-copy-id -o "StrictHostKeyChecking=no" vagrant@$val 
 done
@@ -18,7 +18,7 @@ PROJECT_DIRECTORY="/home/vagrant/ansible_project/"
 mkdir -p $PROJECT_DIRECTORY
 cd $PROJECT_DIRECTORY
 
-# Creating the inventory file for all 3 nodes to run some adhoc command.
+# Creating the inventory file for all 4 nodes to run some adhoc command.
 
 echo -e "controller\n\n[k8s-master]\host1\n\n[k8s-worker]\host2\nhost3" > inventory
 echo -e "[defaults]\ninventory = inventory" > ansible.cfg
