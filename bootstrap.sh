@@ -11,12 +11,12 @@ touch /home/vagrant/.hushlogin
 
 # Updating the hosts file for all the 4 nodes with the IP given in vagrantfile
 
-# 192.168.56.10 controller.ansible.com vm-1
-# 192.168.56.11 k8s-master.ansible.com vm-2
-# 192.168.56.12 k8s-worker1.ansible.com vm-3
-# 192.168.56.13 k8s-worker2.ansible.com vm-4
+# 192.168.56.10 controller.ansible.com controller
+# 192.168.56.11 master.ansible.com master
+# 192.168.56.12 worker1.ansible.com worker1
+# 192.168.56.13 worker2.ansible.com worker2
 
-echo -e "192.168.56.10 controller.anslab.com vm-1\n192.168.56.11 k8s-master.anslab.com vm-2\n192.168.56.12 k8s-worker1.anslab.com vm-3\n192.168.56.13 k8s-worker2.anslab.com vm-4" >> /etc/hosts
+echo -e "192.168.56.10 controller.anslab.com controller\n192.168.56.11 master.anslab.com master\n192.168.56.12 worker1.anslab.com worker1\n192.168.56.13 worker2.anslab.com worker2" >> /etc/hosts
 
 # Installing necessary packages 
 
@@ -27,4 +27,3 @@ sudo apt update && sudo apt -y install curl wget net-tools iputils-ping python3-
 if [[ $(hostname) = "controller" ]]; then
   sudo pip3 install ansible
 fi
-
