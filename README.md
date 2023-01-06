@@ -20,6 +20,7 @@ vagrant up
 # II - DEPLOY K8S CLUSTER USING ANSIBLE PLAYBOOK
 ```
 vagrant ssh manager
+bash key_gen.sh
 ansible -i ~/ansible/inventory all -m ping
 ```
 
