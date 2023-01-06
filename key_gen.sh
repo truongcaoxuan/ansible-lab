@@ -13,7 +13,7 @@ done
 
 # CREATE THE INVENTORY FILE
 
-PROJECT_DIRECTORY="/home/vagrant/ansible_project/"
+PROJECT_DIRECTORY="/home/vagrant/ansible/"
 
 mkdir -p $PROJECT_DIRECTORY
 cd $PROJECT_DIRECTORY
