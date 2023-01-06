@@ -14,17 +14,17 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
 
   # VM1: Master node where ansible will be installed
-  config.vm.define "controller" do |controller|
-    controller.vm.hostname = "controller.anslab.com"
-    controller.vm.network "private_network", ip: "192.168.56.10"
-    controller.vm.provision "shell", path: "../ansible-lab/bootstrap.sh"
-    controller.vm.provision "file", source: "../ansible-lab/key_gen.sh", destination: "/home/vagrant/"
-    controller.vm.provision "file", source: "../ansible-lab/k8s", destination: "/home/vagrant/k8s"
+  config.vm.define "manager" do |manager|
+    manager.vm.hostname = "manager.anslab.com"
+    manager.vm.network "private_network", ip: "192.168.56.10"
+    manager.vm.provision "shell", path: "../ansible-lab/bootstrap.sh"
+    manager.vm.provision "file", source: "../ansible-lab/key_gen.sh", destination: "/home/vagrant/"
+    manager.vm.provision "file", source: "../ansible-lab/k8s", destination: "/home/vagrant/k8s"
   end
 
   # VM2 : Managed node 1.
-  config.vm.define "master" do |m1|
-    m1.vm.hostname = "master.anslab.com"
+  config.vm.define "controller" do |m1|
+    m1.vm.hostname = "controller.anslab.com"
     m1.vm.network "private_network", ip: "192.168.56.11"
     m1.vm.provision "shell", path: "../ansible-lab/bootstrap.sh"
   end
