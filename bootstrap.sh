@@ -20,10 +20,11 @@ echo -e "192.168.56.10 manager.anslab.com manager\n192.168.56.11 controller.ansl
 
 # Installing necessary packages 
 
-#sudo apt update --fix-missing && sudo apt -y install curl wget net-tools iputils-ping python3-pip sshpass
+sudo apt update --fix-missing 
+sudo apt -y install curl wget net-tools iputils-ping python3-pip sshpass
 
 # Install ansible using pip only in manager node
 
-#if [[ $(hostname) = "manager" ]]; then
-#  sudo pip3 install ansible
-#fi
+if [[ $(hostname) = "manager" ]]; then
+  sudo pip3 install ansible
+fi
