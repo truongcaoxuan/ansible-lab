@@ -4,10 +4,10 @@ This repository contains three node ansible lab setup using vagrant and virtualb
 
 |    Node Type   | Node Name             |  IP Address  | OS Flavor     |
 | ---------------| --------------------- |--------------|---------------|
-| VM1-Controller | controller.anslab.com | 192.168.56.10 | ubuntu/focal64|
-| VM2 - Host 1   | master.anslab.com     | 192.168.56.11 | ubuntu/focal64|
-| VM3 - Host 2   | worker1.anslab.com    | 192.168.56.12 | ubuntu/focal64|
-| VM4 - Host 3   | worker2.anslab.com    | 192.168.56.13 | ubuntu/focal64|
+| VM1-Manager    | manager.anslab.com    | 192.168.56.10 | ubuntu/focal64|
+| VM2-Controller | controller.anslab.com | 192.168.56.11 | ubuntu/focal64|
+| VM3-Worker 1   | worker1.anslab.com    | 192.168.56.12 | ubuntu/focal64|
+| VM4-Worker 2   | worker2.anslab.com    | 192.168.56.13 | ubuntu/focal64|
 
 Reference detailed explanation using the below link.
 https://ostechnix.com/ansible-lab-setup-with-vagrant-and-virtualbox-in-linux/
@@ -18,7 +18,7 @@ vagrant up
 ```
 # Install K8S
 ```
-vagrant ssh controller
+vagrant ssh manager
 ansible -i ~/ansible/inventory all -m ping
 ```
 
@@ -33,9 +33,9 @@ ansible-playbook -i ~/ansible/inventory users.yml
 ansible-playbook -i ~/ansible/inventory ~/k8s/install-k8s.yml
 ```
 
-## Creating a Kubernetes Cluster Master Node using Ansible Playbook
+## Creating a Kubernetes Cluster Controller Node using Ansible Playbook
 ```
-ansible-playbook -i ~/ansible/inventory ~/k8s/master.yml
+ansible-playbook -i ~/ansible/inventory ~/k8s/controllers.yml
 kubectl get nodes
 ```
 
