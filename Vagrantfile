@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
     controller.vm.network "private_network", ip: "192.168.56.10"
     controller.vm.provision "shell", path: "bootstrap.sh"
     controller.vm.provision "file", source: "key_gen.sh", destination: "/home/vagrant/"
+    controller.vm.provision "file", source: "~/k8s", destination: "$HOME/k8s"
   end
 
   # VM2 : Managed node 1.
