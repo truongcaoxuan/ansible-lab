@@ -1,4 +1,7 @@
 ### I - DEPLOY ANSIBLE USING VAGRANT ON VIRTUALBOX
+![ansible-image](https://user-images.githubusercontent.com/54384725/210966670-0b02268e-c99d-42f5-ba41-2d7c7fe6fe99.png)
+
+
 #### Ansible Lab Using Vagrant And Virtualbox
 
 #### This repository contains three node ansible lab setup using vagrant and virtualbox as the provider.
