@@ -1,5 +1,5 @@
 ---
-- hosts: "masters, workers"
+- hosts: "master, worker"
   remote_user: vagrant
   become: yes
   become_method: sudo
