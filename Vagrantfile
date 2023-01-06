@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
 
   # Will not check for box updates during every startup.
   config.vm.box = "ubuntu/focal64"
-  config.vm.box_version = "20221213.0.0"
+  #config.vm.box_version = "20221213.0.0"
   config.vm.box_check_update = false
 
   # VM1: Master node where ansible will be installed
