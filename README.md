@@ -3,12 +3,12 @@
 
 #### This repository contains three node ansible lab setup using vagrant and virtualbox as the provider.
 
-| Node Type | Node Name             |  IP Address   | OS Flavor      | App               |
-| ----------| --------------------- |---------------|----------------|-------------------|
-| VM1       | manager.anslab.com    | 192.168.56.10 | ubuntu/focal64 | Ansible-Manager   |
-| VM2       | controller.anslab.com | 192.168.56.11 | ubuntu/focal64 | K8S-Controller    |
-| VM3       | worker1.anslab.com    | 192.168.56.12 | ubuntu/focal64 | K8S-Worker Node 1 |
-| VM4       | worker2.anslab.com    | 192.168.56.13 | ubuntu/focal64 | K8S-Worker Node 2 |
+| Node Type | Vagrant VM Define |  IP Address   | OS Flavor      | App               |
+| ----------| ------------------|---------------|----------------|-------------------|
+| VM1       | manager           | 192.168.56.10 | ubuntu/focal64 | Ansible-Manager   |
+| VM2       | controller        | 192.168.56.11 | ubuntu/focal64 | K8S-Controller    |
+| VM3       | worker1           | 192.168.56.12 | ubuntu/focal64 | K8S-Worker Node 1 |
+| VM4       | worker2           | 192.168.56.13 | ubuntu/focal64 | K8S-Worker Node 2 |
 
 ```
 git clone 
