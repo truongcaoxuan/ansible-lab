@@ -1,4 +1,4 @@
-- hosts: 'worker, master'
+- hosts: 'workers, controllers'
   become: yes
 
   tasks:
