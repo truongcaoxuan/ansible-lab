@@ -19,29 +19,29 @@ vagrant up
 # Install K8S
 ```
 vagrant ssh controller
-ansible -i ~/ansible_project/inventory all -m ping
+ansible -i ~/ansible/inventory all -m ping
 ```
 
 ## Creating a Kubernetes user with Ansible Playbook
 ```
-ansible-playbook -i ~/ansible_project/inventory ~/k8s/users.yml
-ansible-playbook -i ~/ansible_project/inventory users.yml
+ansible-playbook -i ~/ansible/inventory ~/k8s/users.yml
+ansible-playbook -i ~/ansible/inventory users.yml
 ```
 
 ## Install Kubernetes with Ansible Playbook
 ```
-ansible-playbook -i ~/ansible_project/inventory ~/k8s/install-k8s.yml
+ansible-playbook -i ~/ansible/inventory ~/k8s/install-k8s.yml
 ```
 
 ## Creating a Kubernetes Cluster Master Node using Ansible Playbook
 ```
-ansible-playbook -i ~/ansible_project/inventory ~/k8s/master.yml
+ansible-playbook -i ~/ansible/inventory ~/k8s/master.yml
 kubectl get nodes
 ```
 
 ## Join Worker Nodes to Kubernetes Cluster using Ansible Playbook
 ```
-ansible-playbook -i ~/ansible_project/inventory ~/k8s/join-workers.yml
+ansible-playbook -i ~/ansible/inventory ~/k8s/join-workers.yml
 kubectl get nodes
 ```
 
