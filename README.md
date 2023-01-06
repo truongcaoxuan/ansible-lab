@@ -10,8 +10,6 @@ This repository contains three node ansible lab setup using vagrant and virtualb
 | VM3-Worker 1   | worker1.anslab.com    | 192.168.56.12 | ubuntu/focal64|
 | VM4-Worker 2   | worker2.anslab.com    | 192.168.56.13 | ubuntu/focal64|
 
-Reference detailed explanation using the below link.
-https://ostechnix.com/ansible-lab-setup-with-vagrant-and-virtualbox-in-linux/
 ```
 git clone 
 cd vagrant
@@ -29,7 +27,6 @@ ansible -i ~/ansible/inventory all -m ping
 ## 1. Creating a Kubernetes user with Ansible Playbook
 ```
 ansible-playbook -i ~/ansible/inventory ~/k8s/users.yml
-ansible-playbook -i ~/ansible/inventory users.yml
 ```
 
 ## 2. Install Kubernetes with Ansible Playbook
@@ -53,3 +50,7 @@ kubectl get nodes
 ```
 vagrant destroy -f
 ```
+
+### Reference link.
+- https://ostechnix.com/ansible-lab-setup-with-vagrant-and-virtualbox-in-linux/
+- https://buildvirtual.net/deploy-a-kubernetes-cluster-using-ansible/
