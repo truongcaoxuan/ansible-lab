@@ -1,4 +1,5 @@
-# Ansible Lab Using Vagrant And Virtualbox
+## I - DEPLOY ANSIBLE USING VAGRANT ON VIRTUALBOX
+### Ansible Lab Using Vagrant And Virtualbox
 
 This repository contains three node ansible lab setup using vagrant and virtualbox as the provider.
 
@@ -16,30 +17,30 @@ git clone
 cd vagrant
 vagrant up
 ```
-# Install K8S
+# II - DEPLOY K8S CLUSTER USING ANSIBLE PLAYBOOK
 ```
 vagrant ssh manager
 ansible -i ~/ansible/inventory all -m ping
 ```
 
-## Creating a Kubernetes user with Ansible Playbook
+## 1. Creating a Kubernetes user with Ansible Playbook
 ```
 ansible-playbook -i ~/ansible/inventory ~/k8s/users.yml
 ansible-playbook -i ~/ansible/inventory users.yml
 ```
 
-## Install Kubernetes with Ansible Playbook
+## 2. Install Kubernetes with Ansible Playbook
 ```
 ansible-playbook -i ~/ansible/inventory ~/k8s/install-k8s.yml
 ```
 
-## Creating a Kubernetes Cluster Controller Node using Ansible Playbook
+## 3. Creating a Kubernetes Cluster Controller Node using Ansible Playbook
 ```
 ansible-playbook -i ~/ansible/inventory ~/k8s/controllers.yml
 kubectl get nodes
 ```
 
-## Join Worker Nodes to Kubernetes Cluster using Ansible Playbook
+## 4. Join Worker Nodes to Kubernetes Cluster using Ansible Playbook
 ```
 ansible-playbook -i ~/ansible/inventory ~/k8s/join-workers.yml
 kubectl get nodes
