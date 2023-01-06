@@ -1,4 +1,4 @@
-- hosts: master
+- hosts: controllers
   become: yes
   tasks:
     - name: initialize the cluster
