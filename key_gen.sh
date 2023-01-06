@@ -20,7 +20,7 @@ cd $PROJECT_DIRECTORY
 
 # Creating the inventory file for all 4 nodes to run some adhoc command.
 
-echo -e "controller\n\n[master]\nmaster\n\n[worker]\nworker1\nworker2" > inventory
+echo -e "manager\n\n[controllers]\ncontroller\n\n[workers]\nworker1\nworker2" > inventory
 echo -e "[defaults]\ninventory = inventory" > ansible.cfg
 echo -e "-------------------- RUNNING ANSBILE ADHOC COMMAND - UPTIME ------------------------------"
 echo
