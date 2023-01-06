@@ -16,6 +16,8 @@ https://ostechnix.com/ansible-lab-setup-with-vagrant-and-virtualbox-in-linux/
 git clone 
 cd vagrant
 vagrant up
+vagrant status
+vagrant global-status --prune
 ```
 # II - DEPLOY K8S CLUSTER USING ANSIBLE PLAYBOOK
 ```
@@ -46,4 +48,8 @@ kubectl get nodes
 ansible-playbook -i ~/ansible/inventory ~/k8s/join-workers.yml
 kubectl get nodes
 ```
-
+## CLEAN LAB
+### Destroy all vm
+```
+vagrant destroy -f
+```
