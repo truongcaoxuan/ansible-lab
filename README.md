@@ -11,3 +11,12 @@ This repository contains three node ansible lab setup using vagrant and virtualb
 
 Reference detailed explanation using the below link.
 https://ostechnix.com/ansible-lab-setup-with-vagrant-and-virtualbox-in-linux/
+```
+git clone 
+cd vagrant
+vagrant up
+```
+# Install K8S
+vagrant ssh controller
+ansible -i ~/ansible_project/inventory all -m ping
+ansible-playbook -i ~/ansible_project/inventory ~/k8s/users.yml
