@@ -14,8 +14,8 @@
 | VM4       | worker2           | 192.168.56.13 | ubuntu/focal64 | K8S-Worker Node 2 |
 
 ```
-git clone 
-cd vagrant
+git clone https://github.com/truongcaoxuan/ansible-lab.git
+cd ansible-lab
 vagrant up
 vagrant status
 vagrant global-status --prune
