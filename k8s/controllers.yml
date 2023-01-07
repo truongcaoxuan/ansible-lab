@@ -28,6 +28,11 @@
         dest: /home/kube/.kube/config
         remote_src: yes
         owner: kube
+        
+    - name: Export KUBECONFIG
+      shell: |
+              export KUBECONFIG=/home/kube/.kube/config
+               
     - name: Get the token for joining the worker nodes
       become: yes
       become_user: kube
