@@ -35,8 +35,11 @@
       shell: kubeadm token create  --print-join-command
       register: kubernetes_join_command
 
-    - debug:
-      msg: "{{ kubernetes_join_command.stdout }}"
+    - name: Print statements during execution kubernetes join command
+      debug:
+        msg:
+        - "{{ kubernetes_join_command.stdout }}"
+        - "Statements during execution kubernetes join command."
 
     - name: Copy join command to local file.
       become: yes
